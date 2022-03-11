@@ -82,8 +82,8 @@ function findEmployeeByFirstName(srcArray, name){
 
 function calculatePayroll(array){
     let totalPayment = 0
-    for(let item in array){
-        totalPayment += allWagesFor().bind(item)
+    for(let item of array){
+        totalPayment += allWagesFor.call(item)
         console.log('totalPayment', totalPayment)
     }
     console.log('totalPayment', totalPayment)
